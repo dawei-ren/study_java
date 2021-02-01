@@ -1,0 +1,6 @@
+server:
+  port: 8081
+
+hello:
+  name: 张三
+  age: ${random.int}

@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    # 指定默认使用的配置文件为dev配置文件, 也可以在命令行中: Program arguments中指定 --spring.profiles.active=dev
+    # 我们还可以在运行jar项目包的时候通过 java -jar abc.jar --spring.config.location来改变默认的配置文件位置
+    active: dev
+
+hello:
+  name: 张三
+  age: ${random.int}

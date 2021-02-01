@@ -1,0 +1,8 @@
+version: '3'
+services:
+  test-docker:
+    build: .
+    env_file:
+      - D:\study\myprogram\test-java\study_java\my_docker\config\.env.dev
+
+

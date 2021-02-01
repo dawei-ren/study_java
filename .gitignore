@@ -1,0 +1,14 @@
+target/
+.settings
+*.zhonglibo
+*.out
+*.log
+log.txt
+*/dependency-reduced-pom.xml
+*.yudipu.raw
+
+#intelliJ files
+.idea
+*.eml
+*.iml
+*.classpath
