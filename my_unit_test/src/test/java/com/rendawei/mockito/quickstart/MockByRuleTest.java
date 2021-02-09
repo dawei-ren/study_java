@@ -1,5 +1,7 @@
 package com.rendawei.mockito.quickstart;
 
+import com.rendawei.mockito.quickstart.Account;
+import com.rendawei.mockito.quickstart.AccountDao;
 import org.junit.Rule;
 import org.junit.Test;
 import org.mockito.junit.MockitoJUnit;

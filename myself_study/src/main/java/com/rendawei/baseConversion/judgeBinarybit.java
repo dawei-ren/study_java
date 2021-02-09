@@ -25,8 +25,8 @@ public class judgeBinarybit {
     byte b_byte = (byte) b;
     System.out.println(b_byte & 64);
 
-    Byte c = new Byte((byte) 1);
-    System.out.println(c.byteValue());
+    byte c = (byte) 1;
+    System.out.println(c);
   }
 
 
@@ -38,5 +38,12 @@ public class judgeBinarybit {
     } else {
       return 1;
     }
+  }
+
+  public static boolean judge7thBit(byte b){
+
+    // 判断二进制第七位是0还是1，如果是0，返回true，如果是1 返回false
+    // 64 : 0100 0000
+    return (b & 64) == 0;
   }
 }
