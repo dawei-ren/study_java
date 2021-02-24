@@ -10,6 +10,15 @@ public class ByteBufferTest {
       byteBuffer.put((byte) i);
     }
 
+    // 切换成读模式
+    byteBuffer.flip();
+
+//    byteBuffer.mark();
+    // 切换成写模式
+    byteBuffer.compact();
+    byte[] bytes = new byte[]{(byte) 0x55, (byte)0xaa};
+    byteBuffer.put(bytes);
+//    byteBuffer.reset();
     byteBuffer.flip();
 
     while (byteBuffer.hasRemaining()){
@@ -21,6 +30,10 @@ public class ByteBufferTest {
       }
       System.out.println(byteBuffer.hasRemaining());
     }
+
+
+
+
 
   }
 }
