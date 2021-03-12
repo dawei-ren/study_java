@@ -35,6 +35,14 @@ public class BasicToBeTestedTest {
 
     // 测试结果不相等
     Assert.assertNotEquals(true, basic.getState());
+
+    // 测试浮点型,
+    /*
+    *    浮点数比较第三个参数是允许误差范围，0代表没有误差，但是这可能会导致测试出错，因为同一个浮点数比如1.1在计算机里有很多表示方式
+    * 比如1.1和1.0999999999999999，一般建议误差为0.0001
+    *
+    * */
+    Assert.assertEquals(110.1, basic.getFloatData(), 0.0001);
   }
 
   @Test

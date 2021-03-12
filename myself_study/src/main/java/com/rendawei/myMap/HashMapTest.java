@@ -11,13 +11,23 @@ public class HashMapTest {
   public Map<String, List<String>> normalGetValue(String key){
 
     // 获取值，如果值为空，创建值并赋值
-    List<String> earliest = map.get(key);
-    if (earliest == null){
-       List<String> list = new LinkedList<>();
-       map.put(key, list);
+//    List<String> earliest = map.get(key);
+//    if (earliest == null){
+//       List<String> list = new LinkedList<>();
+//       map.put(key, list);
+//    }
+//
+//    map.get(key).add("One");
+
+    // 判断是否存在，如果存在，更新，如果不存在，添加
+    if (map.containsKey(key)){
+      map.get(key).add("one");
+    } else {
+      List<String> list = new LinkedList<>();
+      map.put(key, list);
     }
 
-    map.get(key).add("One");
+
     return map;
   }
 

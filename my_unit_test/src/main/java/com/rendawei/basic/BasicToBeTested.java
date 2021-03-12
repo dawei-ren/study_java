@@ -32,4 +32,8 @@ public class BasicToBeTested {
   public void failed() throws Exception {
     throw new Exception("aaa");
   }
+
+  public float getFloatData(){
+    return 110.1f;
+  }
 }

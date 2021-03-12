@@ -24,7 +24,4 @@ public class PersonTest {
 
     Mockito.verify(loggerMock, Mockito.times(1)).error("age error");
   }
-
-
-
 }

@@ -1,5 +1,7 @@
 package com.rendawei.myString;
 
+import java.util.Date;
+
 public class StringFormat {
   public static void main(String[] args) {
 //    byte[] byteArray = {(byte) 0x7c};
@@ -15,5 +17,8 @@ public class StringFormat {
     }
 
     System.out.println(sb.toString());
+
+
+    System.out.println(String.format("%s, %s, %s", 1, "content", true));
   }
 }
