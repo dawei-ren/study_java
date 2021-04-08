@@ -29,6 +29,15 @@ public class decimalToHexadecimal {
     System.out.println(hexString);
 
 
+    System.out.println("将16进制字符串转化为byte数组");
+    String hexString1 = "DDDD";
+    byte[] byteArray = hexToByteArray(hexString1);
+    System.out.println(Arrays.toString(byteArray));
+    for (byte byt : byteArray) {
+      System.out.format("0x%02X ", byt);
+    }
+
+
   }
 
   public static String byteArrayToHexString(Collection<Byte> binaryData) {
@@ -45,4 +54,30 @@ public class decimalToHexadecimal {
     }
     return sb.toString();
   }
+
+
+  public static byte[] hexToByteArray(String inHex){
+    int hexlen = inHex.length();
+    byte[] result;
+    if (hexlen % 2 == 1){
+      //奇数
+      hexlen++;
+      result = new byte[(hexlen/2)];
+      inHex="0"+inHex;
+    }else {
+      //偶数
+      result = new byte[(hexlen/2)];
+    }
+    int j=0;
+    for (int i = 0; i < hexlen; i+=2){
+      result[j]=hexToByte(inHex.substring(i,i+2));
+      j++;
+    }
+    return result;
+  }
+
+  public static byte hexToByte(String inHex){
+    return (byte)Integer.parseInt(inHex,16);
+  }
+
 }

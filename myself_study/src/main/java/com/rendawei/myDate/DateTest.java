@@ -1,4 +1,4 @@
-package com.rendawei.basic;
+package com.rendawei.myDate;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
