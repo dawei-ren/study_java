@@ -37,5 +37,10 @@ public class TestListInit {
     // 使用Stream初始化
     List<String> list4 = Stream.of("a", "b", "c", "d").collect(Collectors.toList());
     System.out.println(list4);
+
+
+    String[] myArray = { "Apple", "Banana", "Orange" };
+    List myList = Arrays.asList(myArray);
+    System.out.println(myList);
   }
 }
